@@ -1,11 +1,11 @@
-ARG BASE_IMAGE=debian:bullseye-slim
+ARG BASE_IMAGE
 
 FROM $BASE_IMAGE
 
-ARG NRFTOOLS_URL=https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/10-15-4/nrf-command-line-tools-10.15.4_amd64.zip
-ARG SEGGER_URL=https://www.segger.com/downloads/embedded-studio/EmbeddedStudio_ARM_Linux_x64
-ARG NRF_SDK_URL=https://developer.nordicsemi.com/nRF5_SDK/nRF5_SDK_v15.x.x/nRF5_SDK_15.3.0_59ac345.zip
-ARG NRF_MESH_SDK_URL=https://www.nordicsemi.com/-/media/Software-and-other-downloads/SDKs/nRF5-SDK-for-Mesh/nrf5SDKforMeshv420src.zip
+ARG NRFTOOLS_URL
+ARG SEGGER_URL
+ARG NRF_SDK_URL
+ARG NRF_MESH_SDK_URL
 
 
 RUN apt-get update && \
