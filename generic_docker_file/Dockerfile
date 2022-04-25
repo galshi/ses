@@ -41,19 +41,19 @@ ENV INSTALL="/nordic/sdk"
 
 RUN mkdir -p ${INSTALL} && \
 	cd ${INSTALL} && \
-	curl -L $NRF_SDK_URL -o nRF5_SDK_15.3.0_59ac345.zip && \
-	unzip nRF5_SDK_15.3.0_59ac345.zip && \
-	rm nRF5_SDK_15.3.0_59ac345.zip && \
-	ln -sf ${INSTALL}/nRF5_SDK_15.3.0_59ac345 /sdk && \
+	curl -L $NRF_SDK_URL -o nrf_sdk.zip && \
+	unzip nrf_sdk.zip && \
+	rm nrf_sdk.zip && \
+	ln -sf ${INSTALL}(find ${INSTALL} -type d nRF.*) /sdk && \
 	cd ..
 
 ENV INSTALL="/nordic/mesh_sdk"
 
 RUN mkdir -p ${INSTALL} && \
 	cd ${INSTALL} && \
-	curl -L $NRF_MESH_SDK_URL -o nrf5_SDK_for_Mesh_v4.2.0_src.zip && \
-	unzip nrf5_SDK_for_Mesh_v4.2.0_src.zip && \
-	rm nrf5_SDK_for_Mesh_v4.2.0_src.zip && \
+	curl -L $NRF_MESH_SDK_URL -o nrf_mesh_sdk.zip && \
+	unzip nrf_mesh_sdk.zip && \
+	rm nrf_mesh_sdk.zip && \
 	ln -sf ${INSTALL} /mesh_sdk && \
 	cd ..
 
