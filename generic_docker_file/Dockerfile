@@ -9,8 +9,9 @@ ARG NRF_MESH_SDK_URL
 
 
 RUN apt-get update && \
-	apt-get install -y libusb-1.0-0-dev libx11-6 libfreetype6 libxrender1 libfontconfig1 libxext6 xvfb curl unzip python3-pip git zip && \
-	pip install nrfutil
+    apt-get install -y libusb-1.0-0-dev libx11-6 libfreetype6 libxrender1 libfontconfig1 libxext6 xvfb curl unzip python3-pip git zip && \
+    rm -rf /var/lib/apt/lists/* && \
+    pip install nrfutil
 
 RUN Xvfb :1 -screen 0 1024x768x16 &
 
